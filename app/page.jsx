@@ -38,7 +38,7 @@ export default function Page() {
                     href="https://docs.netlify.com/frameworks/next-js/overview/"
                     className="btn btn-lg btn-primary sm:btn-wide"
                 >
-                    Read the Docs
+                    Read the Documentation/kojo
                 </Link>
             </section>
             {!!ctx && (

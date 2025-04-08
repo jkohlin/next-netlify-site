@@ -10,10 +10,14 @@
     },
     "dependencies": {
         "@netlify/blobs": "^8.1.2",
+        "@portabletext/react": "^3.2.1",
+        "@sanity/client": "^6.28.4",
+        "@sanity/image-url": "^1.1.0",
         "blobshape": "^1.0.0",
         "bright": "^0.8.5",
         "markdown-to-jsx": "^7.4.5",
         "next": "15.2.4",
+        "next-sanity": "^9.9.9",
         "react": "18.3.1",
         "react-dom": "18.3.1",
         "unique-names-generator": "^4.7.1"
