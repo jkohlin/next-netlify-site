@@ -14,7 +14,7 @@
         "@sanity/client": "^6.28.4",
         "@sanity/image-url": "^1.1.0",
         "blobshape": "^1.0.0",
-        "bright": "^0.8.5",
+        "bright": "^1.0.0",
         "markdown-to-jsx": "^7.4.5",
         "next": "15.5.3",
         "next-sanity": "^9.9.9",
