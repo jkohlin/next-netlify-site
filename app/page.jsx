@@ -1,3 +1,4 @@
+/* old:
 import Link from 'next/link';
 import { Card } from 'components/card';
 import { RandomQuote } from 'components/random-quote';
@@ -52,7 +53,7 @@ export default function Page() {
                 <RandomQuote />
                 <Markdown content={postDynamicContentExplainer} />
             </section>
-            {/* !!cards?.length && <CardsGrid cards={cards} /> */}
+            {// !!cards?.length && <CardsGrid cards={cards} /> }
         </main>
     );
 }
@@ -64,4 +65,24 @@ function RuntimeContextCard() {
     } else {
         return <Card title={title} text="This page was statically-generated at build time." />;
     }
+}
+
+*/
+// ./src/app/page.tsx
+
+import { client } from 'src/sanity/lib/client';
+import { POSTS_QUERY } from 'src/sanity/lib/queries';
+
+export default async function PostIndex() {
+    const posts = await client.fetch(POSTS_QUERY);
+
+    return (
+        <ul>
+            {posts.map((post) => (
+                <li key={post._id}>
+                    <a href={`/posts/${post?.slug.current}`}>{post?.title}</a>
+                </li>
+            ))}
+        </ul>
+    );
 }
